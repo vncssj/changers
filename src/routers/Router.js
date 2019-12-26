@@ -2,17 +2,25 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Constants from 'expo-constants';
 import Home from './../pages/Home';
-import Details from './../pages/Details';
+import Register from '../pages/Register';
 
 const AppNavigator = createStackNavigator({
         Home: {
                 screen: Home,
         },
-        Details: {
-                screen: Details,
-        }
+        Register: {
+                screen: Register,
+                navigationOptions: {
+                        headerStyle: {
+                                backgroundColor: '#0CB5CF',
+                        },
+                        headerTitle: "Faça parte da nossa Comunidade"
+                },
+                headerLeft: true,
+                headerTintColor: '#fff',
+        },
 }, {
-        initialRouteName: 'Home',
+        initialRouteName: 'Register',
         defaultNavigationOptions: {
                 headerStyle: {
                         backgroundColor: '#0CB5CF',
